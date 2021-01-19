@@ -6,7 +6,7 @@ import {CHAT_ROUTER, LOGIN_ROUTER} from "../utils/consts";
 
 const AppRouter = () => {
 
-    const user = true
+    const user = false
 
     return user
         ?

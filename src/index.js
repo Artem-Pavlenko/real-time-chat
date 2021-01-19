@@ -1,9 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from "react-router-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {BrowserRouter} from "react-router-dom"
+import firebase from "firebase"
+import 'firebase/firestore'
+import 'firebase/auth'
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+
+// Your web app's Firebase configuration
+// Initialize Firebase
+firebase.initializeApp({
+    apiKey: "AIzaSyDgVxxbwcPm59Ea2NUwNaR_70h9gTEDIjI",
+    authDomain: "chat-react-bf9ae.firebaseapp.com",
+    projectId: "chat-react-bf9ae",
+    storageBucket: "chat-react-bf9ae.appspot.com",
+    messagingSenderId: "724727069942",
+    appId: "1:724727069942:web:9a29c700901dcd864000d7",
+    measurementId: "G-EQVGFLLTG9"
+})
 
 ReactDOM.render(
   <React.StrictMode>
