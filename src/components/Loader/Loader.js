@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, CircularProgress, Container, Grid} from "@material-ui/core";
+import {CircularProgress, Container, Grid} from "@material-ui/core";
 
 const Loader = () => {
     return (
@@ -11,7 +11,7 @@ const Loader = () => {
                 alignItems={"center"}
             >
                 <Grid container alignItems={"center"} direction={"column"}>
-                    <CircularProgress />
+                    <CircularProgress/>
                 </Grid>
             </Grid>
         </Container>
