@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {createContext} from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter} from "react-router-dom"
-import firebase from "firebase"
+import firebase from "firebase/app"
 import 'firebase/firestore'
 import 'firebase/auth'
 import './index.css'
@@ -20,10 +20,21 @@ firebase.initializeApp({
     measurementId: "G-EQVGFLLTG9"
 })
 
+export const Context = createContext(null)
+
+const auth = firebase.auth()
+const firestore = firebase.firestore()
+
 ReactDOM.render(
   <React.StrictMode>
       <BrowserRouter>
-          <App/>
+          <Context.Provider value={{
+              firebase,
+              auth,
+              firestore
+          }}>
+              <App/>
+          </Context.Provider>
       </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
